@@ -72,8 +72,8 @@ public class CheckersBoard : MonoBehaviour
         {
             for (int x = 0; x < 8; x += 2)
             {
-                // Generate our Piece
-                GeneratePiece(x, y);
+                // Generate our Piece + one in x if y is an odd number
+                GeneratePiece(x + (y % 2), y);
             }
         }
     }
